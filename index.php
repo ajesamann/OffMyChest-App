@@ -1,4 +1,10 @@
-<?php include 'config/config.php'; ?>
+<?php
+
+include 'config/config.php';
+
+session_destroy();
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,13 +47,13 @@
                     <a class="guidelines">Community Guidelines</a>
                 </div>
             </div>
-            <a href="posts.php" class="join-button">
+            <a href="includes/handlers/enter_forums.php" class="join-button">
                <span>Enter Forums </span><i class="fa fa-arrow-right" aria-hidden="true"></i>
             </a>
         </div>
         <div class="app-info-text">
             <i class="x fa fa-times" aria-hidden="true"></i>
-            <div class="info-text">Welcome to OffMyChest! This application allows you to create posts that are completely unfiltered (within our community guidelines). Nobody can comment on your post, and posts cannot be deleted unless they are downvoted 20 times, in which they will be auto deleted. Upon entering the forums, you are allowed to create posts, and interact with other posts. Posts are automatically deleted after 7 days have gone by since the post date. Relax and get it off your chest!</div>
+            <div class="info-text">Welcome to OffMyChest! This application allows you to create posts that are completely unfiltered (within our community guidelines). Nobody can comment on your post, and posts cannot be deleted unless they are downvoted 20 times, in which they will be auto deleted. Upon entering the forums, you are allowed to create posts, and interact with other posts. It's a very simple concept!</div>
         </div>
         <div class="app-guidelines-text">
             <i class="x2 fa fa-times" aria-hidden="true"></i>

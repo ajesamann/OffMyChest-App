@@ -1,7 +1,12 @@
 <?php 
 include 'config/config.php'; 
 include 'includes/handlers/submit_post_handler.php';
-include 'includes/post_class.php'; 
+include 'includes/post_class.php';
+
+if(!isset($_SESSION['user-id'])){
+    header('Location: index.php');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -69,9 +74,15 @@ include 'includes/post_class.php';
                                     $(this).html(response);
                                 }
                             })
+
+                            $('.posts-container').each(function(){
+                                if(response == 20 && ($(this).attr('post-id') == post_id)){
+                                    $(this).remove();
+                                }
+                            })
                     }
                 });
-            });
+            });  
         });
 
         //prevent form resubmission
@@ -89,7 +100,16 @@ include 'includes/post_class.php';
             <a href="index.php"><div class="logo-posts">OffMyChest <i class="fa fa-comment" aria-hidden="true"></i></div></a>
             <div class="welcome">Welcome to the OffMyChest forums</div>
             <div class="username-msg"></div>
-            <div class="sort-posts">Sort posts <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+            <div class="btn-container">
+                <div class="sort-posts">Sort posts <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                <div class="options-sort" style="display: none;">
+                    <form action="posts.php" class="form" method="post">
+                        <input type="submit" id="newest" name="newest-btn" value="Newest">
+                        <input type="submit" id="oldest" name="oldest-btn" value="Oldest">
+                        <input type="submit" id="mliked" name="mliked-btn" value="Most Liked">
+                    </form>
+                </div>
+            </div>
             <form class="new-post" method="POST" action="posts.php">
                 <input type="text" class="post-input-title" name="submit-post-title" placeholder="Title your post">
                 <div class="bottom-post">
@@ -106,5 +126,11 @@ include 'includes/post_class.php';
             ?>
         </div>
     </div>
+    <script>
+        //sort posts button function
+        $(".sort-posts").click(() => {
+            $(".options-sort").slideToggle();
+        });
+    </script>
 <!-- body content -->
 <?php include './includes/footer.php'?>
