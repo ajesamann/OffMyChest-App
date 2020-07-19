@@ -1,0 +1,191 @@
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 100px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: default;
+}
+
+.index-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 75px;
+  background: #4e54c8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #8f94fb,
+    #4e54c8
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #8f94fb,
+    #4e54c8
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
+
+.index-content a {
+  color: white;
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 100px;
+  white-space: nowrap;
+}
+
+.join-button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  text-decoration: none;
+  background-color: white;
+  font-size: 1.5rem;
+  padding: 15px 45px;
+  border-radius: 1000px;
+  -webkit-box-shadow: 0px 0px 24px -7px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px 0px 24px -7px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 0px 24px -7px rgba(0, 0, 0, 0.35);
+  transition: 0.3s all ease-in-out;
+}
+
+.join-button span,
+.join-button i {
+  color: #8f94fb;
+}
+
+.join-button i {
+  font-size: 1.4rem;
+}
+
+.app-info-text,
+.app-guidelines-text {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: auto;
+  padding: 30px;
+  background-color: white;
+  color: #797fff;
+  z-index: 1000;
+  text-align: center;
+  border-radius: 50px;
+  display: none;
+  -webkit-box-shadow: 0px 0px 24px -7px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px 0px 24px -7px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 0px 24px -7px rgba(0, 0, 0, 0.35);
+}
+
+.about,
+.guidelines {
+  cursor: pointer;
+}
+
+.x,
+.x2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+/** mobile devices **/
+@media only screen and (max-width: 768px) {
+  .top {
+    flex-direction: column;
+  }
+
+  .links {
+    width: auto;
+    flex-direction: column;
+    margin-right: 0;
+    height: 80px;
+    justify-content: space-between;
+    margin-top: 80px;
+  }
+
+  .logo {
+    margin-left: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: default;
+  }
+
+  .join-button {
+    position: relative;
+    transform: translate(0, 0);
+    margin-top: 150px;
+    top: 0px;
+    left: 0px;
+    font-size: 1.1rem;
+  }
+
+  .app-info-text,
+  .app-guidelines-text {
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: auto;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .top {
+    flex-direction: column;
+  }
+
+  .links {
+    width: auto;
+    flex-direction: column;
+    margin-right: 0;
+    height: 80px;
+    justify-content: space-between;
+    margin-top: 80px;
+  }
+
+  .logo {
+    margin-left: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: default;
+  }
+
+  .join-button {
+    position: relative;
+    transform: translate(0, 0);
+    margin-top: 150px;
+    top: 0px;
+    left: 0px;
+    font-size: 1.1rem;
+  }
+
+  .app-info-text,
+  .app-guidelines-text {
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: auto;
+    font-size: 0.8rem;
+  }
+}
