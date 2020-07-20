@@ -14,6 +14,7 @@ if(!$conn){
 
 if(!isset($_SESSION)){
     session_start();
+}
 
  /**$dbhost = "localhost";
  $dbuser = "root";
