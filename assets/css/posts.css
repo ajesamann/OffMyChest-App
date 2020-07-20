@@ -215,6 +215,7 @@
   width: 80%;
   height: 120px;
   resize: none;
+  font-size: 1.1rem;
   padding: 20px 20px 0 20px;
   outline: none;
   border: none;
@@ -279,9 +280,16 @@
     width: 100%;
   }
 
+  .no-posts {
+    margin-top: 75px;
+    width: 80%;
+    text-align: center;
+  }
+
   #new-post {
     box-sizing: border-box;
     width: 100%;
+    font-size: 1.1rem;
   }
 
   .new-post {
