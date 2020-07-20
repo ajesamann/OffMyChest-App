@@ -218,6 +218,7 @@
   font-size: 1.1rem;
   padding: 20px 20px 0 20px;
   outline: none;
+  font-family: "Roboto Mono", monospace;
   border: none;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 24px -7px rgba(0, 0, 0, 0.35);
