@@ -3,6 +3,6 @@ A web application that allows users to join into a community/post area with a gi
 
 View it live here -> https://offmychest.herokuapp.com/
 
-[img](https://i.ibb.co/2nZCXsV/omc-1.png)
+![img](https://i.ibb.co/2nZCXsV/omc-1.png)
 
-[img](https://i.ibb.co/4gnpJmM/omc-2.png)
+![img](https://i.ibb.co/4gnpJmM/omc-2.png)
