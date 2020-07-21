@@ -237,6 +237,7 @@
   font-size: 1.3rem;
   font-family: "Roboto Mono", monospace;
   border-radius: 10px;
+  -webkit-appearance: none;
 }
 
 .bottom-post {
